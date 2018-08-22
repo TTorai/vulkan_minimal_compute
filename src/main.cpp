@@ -9,6 +9,7 @@
 
 #include "lodepng.h" //Used for png encoding.
 
+//Atm WIDTH and HEIGHT can be changed but will result in a "wrong" image. Program works best with 3200 and 2400.
 const int WIDTH = 3200; // Size of rendered mandelbrot set.
 const int HEIGHT = 2400; // Size of renderered mandelbrot set.
 const int WORKGROUP_SIZE = 32; // Workgroup size in compute shader.
@@ -60,7 +61,7 @@ private:
     VkDevice device;
 
     /*
-    The pipeline specifies the pipeline that all graphics and compute commands pass though in Vulkan.
+    The pipeline specifies the pipeline that all graphics and compute commands pass through in Vulkan.
 
     We will be creating a simple compute pipeline in this application. 
     */
